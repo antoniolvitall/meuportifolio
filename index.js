@@ -3,7 +3,7 @@ const app = express();
 
 
 app.get("/", (req, res) => {
-    res.send("Bem vndo ao meu site!");
+    res.send("Bem vndo ao meu portifólio");
 })
 
 
