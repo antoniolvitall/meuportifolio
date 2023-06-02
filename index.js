@@ -25,6 +25,10 @@ connection
         console.log(error)
     })
 
+
+
+app.use("/", projectsController);
+
 app.get("/", (req, res) => {
     res.render("index");
 })

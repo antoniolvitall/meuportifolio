@@ -9,4 +9,4 @@ router.get("/admin/projects/new", (req, res) => {
     res.send("ROTA PARA CRIAR NOVO POST DE PROJETO")
 });
 
-modules.exports = router;
+module.exports = router;
