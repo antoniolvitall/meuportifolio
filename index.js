@@ -15,6 +15,10 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Images
+
+app.use(express.static('public'));
+
 //Database
 
 connection
