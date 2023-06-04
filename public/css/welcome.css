@@ -1,5 +1,4 @@
 .jumbotron {
-    display: flex;
     align-items: flex-center;
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -8,5 +7,6 @@
 }
 
 .jumbotron-heading {
-    text-align: start;
+    align-items: start;
+    font-size: 8rem;
 }
