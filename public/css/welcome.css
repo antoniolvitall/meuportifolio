@@ -1,0 +1,12 @@
+.jumbotron {
+    display: flex;
+    align-items: flex-center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-weight: bold;
+    font-size: 10rem;
+}
+
+.jumbotron-heading {
+    text-align: start;
+}
