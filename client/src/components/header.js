@@ -1,43 +1,75 @@
-import React from 'react'
-import Img from 'react-image'
-import Allogo from './public/allogo.png'
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBtn,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+} from 'mdb-react-ui-kit';
 
-const Header = () => {
-  return (
-    <div>
-        <body>
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <Img src={Allogo}/>
-                        Antonio Lindo
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Welcome</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About and Technologies</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </body>
-    </div>
-  )
-}
-
-export default Header
+export default function Header() {
+    const [showBasic, setShowBasic] = useState(false);
+  
+    return (
+      <MDBNavbar expand='lg' light bgColor='light'>
+        <MDBContainer fluid>
+          <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+  
+          <MDBNavbarToggler
+            aria-controls='navbarSupportedContent'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+            onClick={() => setShowBasic(!showBasic)}
+          >
+            <MDBIcon icon='bars' fas />
+          </MDBNavbarToggler>
+  
+          <MDBCollapse navbar show={showBasic}>
+            <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+              <MDBNavbarItem>
+                <MDBNavbarLink active aria-current='page' href='#'>
+                  Home
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              </MDBNavbarItem>
+  
+              <MDBNavbarItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle tag='a' className='nav-link' role='button'>
+                    Dropdown
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem link>Action</MDBDropdownItem>
+                    <MDBDropdownItem link>Another action</MDBDropdownItem>
+                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavbarItem>
+  
+              <MDBNavbarItem>
+                <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+                  Disabled
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+            </MDBNavbarNav>
+  
+            <form className='d-flex input-group w-auto'>
+              <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
+              <MDBBtn color='primary'>Search</MDBBtn>
+            </form>
+          </MDBCollapse>
+        </MDBContainer>
+      </MDBNavbar>
+    );
+  }
