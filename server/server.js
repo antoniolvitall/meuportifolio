@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+//npm run dev
+
 app.get("/api", (req, res) => {
     res.json({"users": ["userOne", "userTwo"]})
 })

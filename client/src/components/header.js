@@ -26,7 +26,7 @@ export default function Header() {
         <MDBContainer fluid>
         <MDBNavbarBrand href='#'>
             <img
-              src='https://www.canva.com/design/DAFj7dCO6wk/view'
+              src='./allogo.png'
               height='30'
               alt=''
               loading='lazy'
