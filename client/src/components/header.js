@@ -17,16 +17,22 @@ import {
 } from 'mdb-react-ui-kit';
 import "./header.css";
 
+
 export default function Header() {
     const [showBasic, setShowBasic] = useState(false);
   
     return (
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>
+        <MDBNavbarBrand href='#'>
+            <img
+              src='https://www.canva.com/design/DAFj7dCO6wk/view'
+              height='30'
+              alt=''
+              loading='lazy'
+            />
             Antonio Lindo
-            </MDBNavbarBrand>
-  
+          </MDBNavbarBrand>
           <MDBNavbarToggler
             aria-controls='navbarSupportedContent'
             aria-expanded='false'
