@@ -15,6 +15,7 @@ import {
   MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
+import "./header.css";
 
 export default function Header() {
     const [showBasic, setShowBasic] = useState(false);
@@ -22,7 +23,9 @@ export default function Header() {
     return (
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
+          <MDBNavbarBrand href='#'>
+            Antonio Lindo
+            </MDBNavbarBrand>
   
           <MDBNavbarToggler
             aria-controls='navbarSupportedContent'
