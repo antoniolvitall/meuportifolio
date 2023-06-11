@@ -1,0 +1,12 @@
+.welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.texto-grande {
+    font-size: 100px;
+}

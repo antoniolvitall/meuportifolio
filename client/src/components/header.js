@@ -18,7 +18,7 @@ export default function Header() {
     const [showBasic, setShowBasic] = useState(false);
   
     return (
-      <MDBNavbar expand='lg' dark bgColor='dark'>
+      <MDBNavbar expand='lg' fixed='top' dark bgColor='dark'>
         <MDBContainer fluid>
         <MDBNavbarBrand href='#'>
             <img

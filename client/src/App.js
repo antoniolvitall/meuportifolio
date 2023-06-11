@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/header';
+import Welcome from './components/Welcome';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <div>
       <Header/>
+      <Welcome/>
     </div>
   )
 }
