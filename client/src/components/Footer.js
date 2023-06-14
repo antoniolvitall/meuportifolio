@@ -13,15 +13,15 @@ const Footer = () => {
       <MDBContainer className='p-4 pb-0'>
         <section className='mb-4'>
 
-          <MDBBtn outline color="light" floating className='m-1' href='mailto:antoniolvitall@gmail.com' role='button'>
+          <MDBBtn outline color="light" floating className='m-1' href='mailto:antoniolvitall@gmail.com' target="_blank" role='button'>
             <MDBIcon fab icon='google' />
           </MDBBtn>
 
-          <MDBBtn outline color="light" floating className='m-1' href='https://www.linkedin.com/in/antonio-luiz-vital-lindo/' role='button'>
+          <MDBBtn outline color="light" floating className='m-1' href='https://www.linkedin.com/in/antonio-luiz-vital-lindo/' target="_blank" role='button'>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
 
-          <MDBBtn outline color="light" floating className='m-1' href='https://github.com/antoniolvitall' role='button'>
+          <MDBBtn outline color="light" floating className='m-1' href='https://github.com/antoniolvitall' target="_blank" role='button'>
             <MDBIcon fab icon='github' />
           </MDBBtn>
         </section>
