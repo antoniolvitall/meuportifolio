@@ -15,7 +15,7 @@ import Logo from './allogo.png';
 
 
 export default function Header() {
-    const [showBasic, setShowBasic] = useState(false);
+    const [showNavCentred, setShowNavCentred] = useState(false);
   
     return (
       <MDBNavbar expand='lg' fixed='top' dark bgColor='dark'>
@@ -33,12 +33,12 @@ export default function Header() {
             aria-controls='navbarSupportedContent'
             aria-expanded='false'
             aria-label='Toggle navigation'
-            onClick={() => setShowBasic(!showBasic)}
+            onClick={() => setShowNavCentred(!showNavCentred)}
           >
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
   
-          <MDBCollapse navbar show={showBasic}>
+          <MDBCollapse navbar show={showNavCentred}>
             <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
               <MDBNavbarItem>
                 <MDBNavbarLink active aria-current='page' href='#'>
